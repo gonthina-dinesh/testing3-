@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--------------------------------------------------------------------------------------------------  -->
+
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">MLL</a></div>
+        <ul class="navnames">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="login">
+            <li>
+              <a href="login.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </div>
+        </ul>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="bars">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+      </div>
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------  -->
+
+    <div class="scroll-container">
+      <div class="boxes">
+        <div class="box1">
+          <a href="{{ url_for('heart') }}" class="button1">HEART ATTACK</a>
+        </div>
+        <div class="box2">
+          <a href="{{ url_for('brain') }}" class="button1">BRAIN STROKE</a>
+        </div>
+        <div class="box3">
+          <a href="{{ url_for('diabetes') }}" class="button1">DIABETES</a>
+        </div>
+
+        <div class="box4">
+          <a href="page1.html" class="button1">PREDICTION X</a>
+        </div>
+        <div class="box5">
+          <a href="page1.html" class="button1">PREDICTION Y</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------  -->
+    <!-- <div class="bottom">
+        
+    </div> -->
+
+    <!-- ------------------------------------------------------------------------- -->
+    <script>
+      const toggleBtn = document.querySelector(".bars");
+      const toggleBtnIcon = document.querySelector(".bars i");
+      const dropDownMenu = document.querySelector(".menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
