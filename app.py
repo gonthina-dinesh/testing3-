@@ -51,7 +51,7 @@ def preprocess_data(data, numeric_cols, categorical_cols=None, scaler=None, enco
 # --------------------- Routes for Pages ---------------------
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index1.html')
 
 @app.route('/heart')
 def heart():
